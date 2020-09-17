@@ -1,0 +1,242 @@
+/* PrismJS 1.20.0
+https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+clike+javascript */
+/**
+ * prism.js tomorrow night eighties for JavaScript, CoffeeScript, CSS and HTML
+ * Based on https://github.com/chriskempson/tomorrow-theme
+ * @author Rose Pritchard
+ */
+
+ code[class*="language-"],
+ pre[class*="language-"] {
+   color: #657b83; /* base00 */
+   font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+   font-size: .8vw;
+   text-align: left;
+   white-space: pre;
+   word-spacing: normal;
+   word-break: normal;
+   word-wrap: normal;
+   line-height: 1.5;
+   -moz-tab-size: 2;
+   -o-tab-size: 2;
+   tab-size: 2;
+   -webkit-hyphens: none;
+   -moz-hyphens: none;
+   -ms-hyphens: none;
+   hyphens: none;
+   left: -6.5vw;
+ }
+ 
+ pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+ code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+   background: #073642; /* base02 */
+ }
+ 
+ pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+ code[class*="language-"]::selection, code[class*="language-"] ::selection {
+   background: #073642; /* base02 */
+ }
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+  padding-top: 10px;
+  /* background-color: rgba(253, 246, 227, 0.9);  */
+  /* base3 */
+  
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #93a1a1; /* base1 */
+}
+
+.token.punctuation {
+	color: #586e75; /* base01 */
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #268bd2; /* blue */
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.url,
+.token.inserted {
+	color: #2aa198; /* cyan */
+}
+
+.token.entity {
+	color: #657b83; /* base00 */
+	background: #eee8d5; /* base2 */
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+	color: #859900; /* green */
+}
+
+.token.function,
+.token.class-name {
+	color: #b58900; /* yellow */
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+	color: #cb4b16; /* orange */
+}
+
+
+.token.important {
+  font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+.token.entity {
+  cursor: help;
+}
+
+.line-numbers {
+    position: relative;
+    counter-reset: linenumber;
+    padding-bottom: 1px;
+}
+
+.line-numbers  code {
+		position: relative;
+}
+
+.line-numbers .line-numbers-rows {
+    position: absolute;
+		pointer-events: none;
+    top: 0;
+    font-size: 100%;
+    width: 3em; /* works for line-numbers below 1000 lines */
+    letter-spacing: -1px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+}
+
+.line-numbers-rows span {
+    pointer-events: none;
+    display: block;
+    counter-increment: linenumber;
+}
+
+.line-numbers-rows  span:before {
+    content: counter(linenumber);
+    color: #999;
+    display: block;
+    transform: translateX(-20px) !important;
+}
+
+
+.content {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    width: 100%; 
+    text-align: left;
+    border-radius: 0 0 5px 5px;
+    overflow: auto;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: wall .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    background-color: #fdfdfd; 
+}
+
+.code-editor span.control {
+    display: inline-block;
+    position:absolute;
+    width:12px; height: 12px;
+    top: 12px;
+    left:0;
+    z-index: 2;
+    border-radius: 20px;
+    -moz-border-radius: 20px;
+    -o-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    overflow: auto;
+    
+
+}
+
+.content > pre{
+  display: none;
+}
+.content > pre.active{
+  display: block;
+}
+/* -- iPad Screen -- */
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+    /* .code-editor {
+        width: 500px; 
+    }
+
+    .code-editor:before {
+        width: 500px;
+    }*/
+} 
+
+/* -- iPhone Screen -- */
+@media only screen and (max-width: 479px) {
+    /* .code-editor {
+        width: 300px;
+    }   
+
+    .code-editor:before {
+        width: 300px;
+    } */
+}
+
+
+/*  스크롤 바 스타일 시트 */
+
+/* .content::-webkit-scrollbar-track
+{
+
+  border-radius: 0 0 5px 0;
+    -moz-border-radius: 0 0 5px 0;
+    -o-border-radius: 0 0 5px 0;
+    -webkit-border-radius: 0 0 5px 0;
+    background-color: rgba(238, 231, 213, 0.9);
+  
+}
+
+.content::-webkit-scrollbar
+{
+  width: 8px;
+}
+
+.content::-webkit-scrollbar-thumb
+{
+
+  border-radius: 1em ;
+} */
